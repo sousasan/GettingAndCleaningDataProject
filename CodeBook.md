@@ -1,6 +1,6 @@
 #Codebook.md
 
-This code book will describe the variables, inputs, outputs, and manipulations used in run_analysis.R
+This code book will describe the variables, inputs, outputs, manipulations, and variables used in run_analysis.R
 
 
 ##Input
@@ -45,8 +45,8 @@ run_analysis.R creates an ouput file to the current directory called "tidy.txt".
 * `<trainActivity>` - data.frame object [7352 x 1] created form the y_train.txt file containing factored values indicating the observation's corresponding activity
 * `<activityLabels>` - data.frame object [6 x 2] containing the descriptive labels for each of the factor values (1 - 6) for activity
 * `<columnNames>` - the vector object (length: 561) created from the features.txt file containing the column names for the data sets
-* `<data>` - the merged data set that will contain testData, trainData, column names, activity data and subject data at the end of the execution
-* `<meanNames>` - a vector with the position of any column names (in columnNames) containing the string pattern "mean"
-* `<stdNames>` - a vector with the position of any column names (in columnNames) containing the string pattern "std"
-* `<averages>` - a subset data.frame of data, containing only the columns including string patterns "mean" and "std", averaged by subject and activity. averages is outputted into the tidy.txt file.
+* `<data>` - the merged data set ([10299 x 68] at the end of execution) that will contain testData, trainData, column names, activity data and subject data at the end of the execution
+* `<meanNames>` - a logical vector (length: 561) with the position of any column names (in columnNames) containing the string pattern "mean"
+* `<stdNames>` - a logical vector (length: 561) with the position of any column names (in columnNames) containing the string pattern "std"
+* `<averages>` - a subset data.frame of data [180 x 68], containing only the columns including string patterns "mean" and "std", averaged by subject and activity. averages is outputted into the tidy.txt file.
 

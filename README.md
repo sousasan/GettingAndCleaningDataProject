@@ -18,4 +18,4 @@ The files contained are:
 The output file containing the average of the mean and standard deviation data - averaged over each activity and subject
 
 ###CodeBook.md 
-Describes in detail, all of the inputs, outputs and manipulations used by run_analysis.R
+Describes in detail, all of the inputs, outputs, manipulations and variables used by run_analysis.R
