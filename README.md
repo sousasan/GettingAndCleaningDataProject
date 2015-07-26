@@ -1,23 +1,21 @@
 #Getting and Cleaning Data Project 
 
-##The files contained are:
-run_analysis.R
-tidy.txt
+This repo contains my submission for the Coursera Getting and Cleaning Data course project - July 2015.
+
+The files contained are:
+*run_analysis.R
+*tidy.txt
+*Codebook.md
 
 
 ##run_analysis.R executes the following:
-###Loads data from:
+1. Loads data from:
 [https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip](https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip) 
-###Merges data from the files:
-X_test.txt
-y_test.txt
-subject_test.txt
-X_train.txt
-y_train.txt
-subject_train.txt
-features.txt
-activity_labels.txt
-###outputs a tidy data set to "tidy.txt" with only the mean and standard deviation data averaged over each activity and subject
+2. Merges data
+3. Outputs a tidy data set to "tidy.txt" with only the mean and standard deviation data averaged over each activity and subject
 
 ##tidy.txt
 The output file containing the average of the mean and standard deviation data - averaged over each activity and subject
+
+##Codebook.md 
+Describes in detail, all of the inputs, outputs and manipulations used by run_analysis.R
