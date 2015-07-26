@@ -1,6 +1,6 @@
 #Codebook.md
 
-This code book will contains the inputs outputs and manipulations used in run_analysis.R
+This code book will contain the inputs outputs and manipulations used in run_analysis.R
 
 
 ##Input
@@ -33,5 +33,4 @@ run_analysis.R creates an ouput file to the current directory called "tidy.txt".
 6. Subsets only the data containing "mean" and "std" using grepl(). Uses ddply() to average out each activity per subject
 
 7. Writes new data set to "tidy.txt" in the current folder using write.table()
-
 
