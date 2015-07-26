@@ -1,10 +1,10 @@
 #Codebook.md
 
-This code book will contain the inputs outputs and manipulations used in run_analysis.R
+This code book will describe the variables, inputs, outputs, and manipulations used in run_analysis.R
 
 
 ##Input
-run_analysis.R requires no inputs and is not a function requiring arguments. The only data it requires is pulled from a set URL to a data set.
+run_analysis.R requires no inputs and is not a function requiring arguments. The only data required is pulled from URL to a data set.
 
 ##Output
 run_analysis.R creates an ouput file to the current directory called "tidy.txt". This output file contains only the mean and standard deviation data averaged over each activity and subject
@@ -33,4 +33,20 @@ run_analysis.R creates an ouput file to the current directory called "tidy.txt".
 6. Subsets only the data containing "mean" and "std" using grepl(). Uses ddply() to average out each activity per subject
 
 7. Writes new data set to "tidy.txt" in the current folder using write.table()
+
+##Variables
+
+* `<file>` - the name of the zip file containing all of the data
+* `<testData>` - data.frame object [2947 x 561] created from the downloaded X_test.txt file
+* `<trainData>` - data.frame object [7352 x 561] created from the downloaded X_train.txt file 
+* `<testSubject>` - data.frame object [2947 x 1] created from the subject_test.txt file
+* `<trainSubject>` - data.frame object [7352 x 1] created from the subject_train.txt file
+* `<testActivity>` - data.frame object [2947 x 1] created form the y_test.txt file containing factored values indicating the observation's corresponding activity
+* `<trainActivity>` - data.frame object [7352 x 1] created form the y_train.txt file containing factored values indicating the observation's corresponding activity
+* `<activityLabels>` - data.frame object [6 x 2] containing the descriptive labels for each of the factor values (1 - 6) for activity
+* `<columnNames>` - the vector object (length: 561) created from the features.txt file containing the column names for the data sets
+* `<data>` - the merged data set that will contain testData, trainData, column names, activity data and subject data at the end of the execution
+* `<meanNames>` - a vector with the position of any column names (in columnNames) containing the string pattern "mean"
+* `<stdNames>` - a vector with the position of any column names (in columnNames) containing the string pattern "std"
+* `<averages>` - a subset data.frame of data, containing only the columns including string patterns "mean" and "std", averaged by subject and activity. averages is outputted into the tidy.txt file.
 
